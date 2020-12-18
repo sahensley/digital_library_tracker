@@ -1,0 +1,33 @@
+---
+- model: humblebundle.developer
+  pk: 1
+  fields:
+    developer: Double Fine Productions
+    developer_url: https://www.doublefine.com/index.php
+
+- model: humblebundle.developer
+  pk: 2
+  fields:
+    developer: KO_OP
+    developer_url: https://www.ko-opmode.com/
+
+- model: humblebundle.developer
+  pk: 3
+  fields:
+    developer: Carlsen Games
+    developer_url: https://www.carlsengames.com/
+
+- model: humblebundle.developer
+  pk: 4
+  fields:
+    developer: Boneloaf
+    developer_url: http://boneloaf.co/
+
+- model: humblebundle.developer
+  pk: 5
+  fields:
+    developer: Coatsink
+    developer_url: https://coatsink.com/
+
+
+

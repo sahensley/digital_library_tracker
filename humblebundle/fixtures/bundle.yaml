@@ -1,0 +1,6 @@
+---
+- model: humblebundle.bundle
+  pk: 1
+  fields:
+    bundle_name: Humble 20 Double Fine Years Bundle
+    bundle_url: https://www.humblebundle.com/games/double-fine-20th-anniversary-bundle

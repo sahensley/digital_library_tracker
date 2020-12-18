@@ -1,0 +1,6 @@
+---
+- model: humblebundle.publisher
+  pk: 1
+  fields:
+    publisher: Double Fine Productions
+    publisher_url: https://www.doublefine.com/index.php
