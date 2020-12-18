@@ -44,9 +44,9 @@ class Person(models.Model):
 
 class HumbleItem(models.Model):
     application = models.ForeignKey(Application, on_delete=models.DO_NOTHING)
-    developer = models.ForeignKey(Developer, on_delete=models.DO_NOTHING)
+    developer = models.ManyToManyField(Developer)
     publisher = models.ForeignKey(Publisher, on_delete=models.DO_NOTHING)
-    bundle_name = models.ForeignKey(Bundle, on_delete=models.DO_NOTHING)
+    bundle = models.ForeignKey(Bundle, on_delete=models.DO_NOTHING)
     date_added = models.DateField(blank=True, null=True)
     expiration_date = models.DateField(blank=True, null=True)
     claimed = models.BooleanField(default=False)
