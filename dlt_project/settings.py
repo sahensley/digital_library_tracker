@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "humblebundle.apps.HumblebundleConfig",
-    "humblechoice.apps.HumblechoiceConfig",
+    "core.apps.CoreConfig",
+    "humblestore.apps.HumblestoreConfig",
     "steam.apps.SteamConfig",
 ]
 

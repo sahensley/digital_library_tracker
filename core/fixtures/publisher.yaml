@@ -1,5 +1,5 @@
 ---
-- model: humblebundle.publisher
+- model: core.publisher
   pk: 1
   fields:
     publisher: Double Fine Productions
