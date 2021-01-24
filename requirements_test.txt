@@ -1,3 +1,4 @@
 -r requirements.txt
-pytest-django
-pytest-env
+-r requirements_dev.txt
+pytest-django==0.2.0
+pytest-env==0.6.2
