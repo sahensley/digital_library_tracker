@@ -129,4 +129,7 @@ dmypy.json
 .pyre/
 
 # Jetbrains
-/.idea/
+.idea/
+
+# Project specific
+db.sqlite3
