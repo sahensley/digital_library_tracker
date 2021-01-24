@@ -8,12 +8,13 @@
             "name": "Python: Django",
             "type": "python",
             "request": "launch",
+            "preLaunchTask": "devsetup",
             "program": "${workspaceFolder}/manage.py",
             "args": [
                 "runserver",
                 "8000"
             ],
             "django": true
-        }
+        },
     ]
 }
