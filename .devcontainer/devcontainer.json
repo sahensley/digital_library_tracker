@@ -37,7 +37,7 @@
 		"ms-python.vscode-pylance",
 		"alexcvzz.vscode-sqlite",
 		"davidanson.vscode-markdownlint",
-		"compulim.vscode-clock"
+		"thebarkman.vscode-djaneiro"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
