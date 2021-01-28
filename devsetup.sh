@@ -3,6 +3,8 @@
 export DJANGO_SUPERUSER_USERNAME="vscode"
 export DJANGO_SUPERUSER_EMAIL="example@example.com"
 export DJANGO_SUPERUSER_PASSWORD="vscode"
+export SECRET_KEY="devsetup_key"
+export ALLOWED_HOSTS='*'
 devdatabase="/workspaces/digital_library_tracker/db.sqlite3"
 
 rm "${devdatabase:?}" 
