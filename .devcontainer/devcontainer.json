@@ -34,7 +34,6 @@
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"ms-python.python",
-		"ms-python.vscode-pylance",
 		"alexcvzz.vscode-sqlite",
 		"davidanson.vscode-markdownlint",
 		"thebarkman.vscode-djaneiro"
