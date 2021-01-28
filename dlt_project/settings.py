@@ -13,9 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import environ
 from pathlib import Path
 
-env = environ.Env(
-    DEBUG=(bool,False)
-)
+env = environ.Env(DEBUG=(bool, False), ALLOWED_HOSTS=(list, []))
 
 # Reads from .env file.  Order: envvar -> .env file -> defaults
 environ.Env.read_env()
@@ -28,12 +26,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = env("SECRET_KEY")
 
-# SECURITY WARNING: don't run with debug turned on in production!
+# False if not set as a envvar
 DEBUG = env("DEBUG")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = env("ALLOWED_HOSTS")
+print(ALLOWED_HOSTS)
 
 
 # Application definition
