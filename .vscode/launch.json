@@ -14,6 +14,9 @@
                 "runserver",
                 "8000"
             ],
+            "env": {
+                "SECRET_KEY": "localhost_development_mode_key"
+            },
             "django": true
         },
     ]
