@@ -15,7 +15,8 @@
                 "8000"
             ],
             "env": {
-                "SECRET_KEY": "localhost_development_mode_key"
+                "SECRET_KEY": "localhost_development_mode_key",
+                "DEBUG": "True"
             },
             "django": true
         },
