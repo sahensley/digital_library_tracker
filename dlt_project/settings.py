@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "core.apps.CoreConfig",
     "humblestore.apps.HumblestoreConfig",
     "steam.apps.SteamConfig",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
