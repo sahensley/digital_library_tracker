@@ -4,3 +4,5 @@ whitenoise==5.2.0
 pyyaml==5.4.1
 graphene-django==2.15.0
 djangorestframework==3.12.2
+gunicorn==20.0.4
+uvicorn==0.13.3
