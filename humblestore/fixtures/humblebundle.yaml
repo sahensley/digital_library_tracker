@@ -1,5 +1,5 @@
 ---
-- model: humblebundle.bundle
+- model: humblestore.humblebundle
   pk: 1
   fields:
     bundle_name: Humble 20 Double Fine Years Bundle
