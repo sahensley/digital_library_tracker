@@ -1,0 +1,6 @@
+---
+- model: core.person
+  pk: 1
+  fields:
+    person_name: Bram Moolenaar
+    person_email: example@example.com

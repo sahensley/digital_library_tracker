@@ -1,0 +1,7 @@
+---
+- model: core.application
+  pk: 1
+  fields:
+    application_name: vim
+    application_url: https://www.vim.org/
+    release_date: 1991-11-02
