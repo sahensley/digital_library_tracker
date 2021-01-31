@@ -26,12 +26,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env("SECRET_KEY")
+SECRET_KEY = env("DJANGO_SECRET_KEY")
 
 # False if not set as a envvar
-DEBUG = env("DEBUG")
+DEBUG = env("DJANGO_DEBUG")
 
-ALLOWED_HOSTS = env("ALLOWED_HOSTS")
+
+ALLOWED_HOSTS = env("DJANGO_ALLOWED_HOSTS")
 
 
 # Application definition
@@ -50,6 +51,9 @@ INSTALLED_APPS = [
     "rest_framework",
 ]
 
+if DEBUG:
+    INSTALLED_APPS += ["django_extensions", "debug_toolbar"]
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
@@ -61,15 +65,17 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+if DEBUG:
+    MIDDLEWARE.insert(2, "debug_toolbar.middleware.DebugToolbarMiddleware")
+    INTERNAL_IPS = ["127.0.0.1"]
+
 ROOT_URLCONF = "dlt_project.urls"
 
 PROJECT_TEMPLATE_DIR = BASE_DIR.joinpath("dlt_project/templates")
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [
-            PROJECT_TEMPLATE_DIR,
-        ],
+        "DIRS": [PROJECT_TEMPLATE_DIR],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
