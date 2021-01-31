@@ -63,10 +63,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "dlt_project.urls"
 
+PROJECT_TEMPLATE_DIR = BASE_DIR.joinpath("dlt_project/templates")
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [
+            PROJECT_TEMPLATE_DIR,
+        ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
