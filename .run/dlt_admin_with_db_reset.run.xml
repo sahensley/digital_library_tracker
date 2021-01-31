@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="dlt admin" type="Python.DjangoServer" factoryName="Django server">
+  <configuration default="false" name="dlt admin with db reset" type="Python.DjangoServer" factoryName="Django server">
     <module name="digital_library_tracker" />
     <option name="INTERPRETER_OPTIONS" value="" />
     <option name="PARENT_ENVS" value="true" />
@@ -24,6 +24,11 @@
     <option name="runNoReload" value="false" />
     <option name="useCustomRunCommand" value="false" />
     <option name="customRunCommand" value="" />
-    <method v="2" />
+    <method v="2">
+      <option name="RunConfigurationTask" enabled="true" run_configuration_name="dlt_resetdb" run_configuration_type="PythonConfigurationType" />
+      <option name="RunConfigurationTask" enabled="true" run_configuration_name="dlt_migrate" run_configuration_type="PythonConfigurationType" />
+      <option name="RunConfigurationTask" enabled="true" run_configuration_name="dlt_syncdata" run_configuration_type="PythonConfigurationType" />
+      <option name="RunConfigurationTask" enabled="true" run_configuration_name="dlt_createsuperuser" run_configuration_type="PythonConfigurationType" />
+    </method>
   </configuration>
 </component>
