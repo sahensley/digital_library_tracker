@@ -6,7 +6,7 @@
         {
             "label": "devsetup",
             "type": "shell",
-            "command": "${workspaceFolder}/devsetup.sh"
+            "command": "${workspaceFolder}/.vscode/devsetup.sh"
         }
     ]
 }
