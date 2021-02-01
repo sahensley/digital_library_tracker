@@ -1,0 +1,16 @@
+---
+- model: humblestore.humbleitem
+  pk: 1
+  fields:
+    application: 1
+    publisher: 1
+    bundle: 1
+    redemption_platform: 1
+    date_added: null
+    redemption_code: ''
+    code_expiration_date: null
+    is_gift: false
+    claimed_by: null
+    date_claimed: null
+    developer:
+    - 1
