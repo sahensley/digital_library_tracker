@@ -1,0 +1,12 @@
+---
+- model: core.platform
+  pk: 1
+  fields:
+    platform: GOG
+    platform_url: https://www.gog.com/
+
+- model: core.platform
+  pk: 2
+  fields:
+    platform: Steam
+    platform_url: https://store.steampowered.com/
