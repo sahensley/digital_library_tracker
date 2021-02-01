@@ -2,5 +2,11 @@
 - model: core.person
   pk: 1
   fields:
-    person_name: Bram Moolenaar
-    person_email: example@example.com
+    person_name: Ford Prefect
+    person_email: null
+
+- model: core.person
+  pk: 2
+  fields:
+    person_name: Arthur Dent
+    person_email: hooptyfrood@example.com
