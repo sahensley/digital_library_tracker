@@ -2,6 +2,13 @@
 - model: core.application
   pk: 1
   fields:
-    application_name: vim
-    application_url: https://www.vim.org/
-    release_date: 1991-11-02
+    application_name: Grim Fandango Remastered
+    application_url: http://grimremastered.com/
+    release_date: 2015-01-26
+
+- model: core.application
+  pk: 2
+  fields:
+    application_name: Full Throttle Remastered
+    application_url: http://fullthrottle.doublefine.com/
+    release_date: 2017-04-18
