@@ -1,6 +1,6 @@
 from django.db import models
 
-from core.models import Person, Application, Publisher, Developer
+from core.models import Application, Developer, Person, Platform, Publisher
 
 
 class HumbleBundle(models.Model):
@@ -16,14 +16,14 @@ class HumbleItem(models.Model):
     developer = models.ManyToManyField(Developer)
     publisher = models.ForeignKey(Publisher, on_delete=models.DO_NOTHING)
     bundle = models.ForeignKey(HumbleBundle, on_delete=models.DO_NOTHING)
-    redemption_platform = models.TextField(
-        help_text="Platform where code is redeemed, such as Steam or GOG"
-    )
+    redemption_platform = models.ForeignKey(Platform, on_delete=models.DO_NOTHING)
     date_added = models.DateField(blank=True, null=True)
-    expiration_date = models.DateField(blank=True, null=True)
+    redemption_code = models.TextField(blank=True, null=True)
+    code_expiration_date = models.DateField(blank=True, null=True)
     is_gift = models.BooleanField(default=False)
-    is_claimed = models.BooleanField(default=False)
-    claimed_by = models.ForeignKey(Person, on_delete=models.DO_NOTHING)
+    claimed_by = models.ForeignKey(
+        Person, blank=True, null=True, on_delete=models.DO_NOTHING
+    )
     date_claimed = models.DateField(blank=True, null=True)
 
     def __str__(self):
