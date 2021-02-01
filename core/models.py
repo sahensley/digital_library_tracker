@@ -32,3 +32,13 @@ class Developer(models.Model):
 
     def __str__(self):
         return self.developer
+
+
+class Platform(models.Model):
+    platform = models.TextField(
+        help_text="Platform where code is redeemed, such as Steam or GOG"
+    )
+    platform_url = models.URLField(blank=True, null=True)
+
+    def __str__(self):
+        return self.platform
