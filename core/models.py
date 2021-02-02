@@ -1,14 +1,6 @@
 from django.db import models
 
 
-class Person(models.Model):
-    person_name = models.TextField()
-    person_email = models.EmailField(blank=True, null=True)
-
-    def __str__(self):
-        return self.person_name
-
-
 class Application(models.Model):
     application_name = models.TextField()
     application_url = models.URLField(blank=True, null=True)
@@ -16,14 +8,6 @@ class Application(models.Model):
 
     def __str__(self):
         return self.application_name
-
-
-class Publisher(models.Model):
-    publisher = models.TextField()
-    publisher_url = models.URLField(blank=True, null=True)
-
-    def __str__(self):
-        return self.publisher
 
 
 class Developer(models.Model):
@@ -34,6 +18,14 @@ class Developer(models.Model):
         return self.developer
 
 
+class Person(models.Model):
+    person_name = models.TextField()
+    person_email = models.EmailField(blank=True, null=True)
+
+    def __str__(self):
+        return self.person_name
+
+
 class Platform(models.Model):
     platform = models.TextField(
         help_text="Platform where code is redeemed, such as Steam or GOG"
@@ -42,3 +34,11 @@ class Platform(models.Model):
 
     def __str__(self):
         return self.platform
+
+
+class Publisher(models.Model):
+    publisher = models.TextField()
+    publisher_url = models.URLField(blank=True, null=True)
+
+    def __str__(self):
+        return self.publisher
