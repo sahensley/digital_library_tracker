@@ -13,13 +13,18 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from django.conf import settings
 
+from core.api.urls import router as core_router
+from humblestore.api.urls import router as humblestore_router
 
-router = DefaultRouter()
+# Setup the main router, extend with app specific router registry
+router = DefaultRouter(trailing_slash=True)
+router.registry.extend(core_router.registry)
+router.registry.extend(humblestore_router.registry)
 urlpatterns = [
     path("", include("core.urls")),
     path("admin/", admin.site.urls),
